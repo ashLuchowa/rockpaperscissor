@@ -55,5 +55,6 @@ if (playerScore > computerScore) {
     console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
     console.log('You lost the game!')
 } else {
+    console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
     console.log('It\'s a tie!')
 }
