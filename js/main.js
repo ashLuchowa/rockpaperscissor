@@ -1,3 +1,5 @@
+function game() {
+
 // computer chooses between rock, paper or scissor
 const getComputerChoice = () => {
     const arrOfChoices = ['rock', 'paper', 'scissor']
@@ -48,3 +50,9 @@ const computerSelection = getComputerChoice();
 console.log(`Player: ${playerSelection}`)
 console.log(`Computer: ${computerSelection}`)
 console.log(playRound(playerSelection, computerSelection))
+
+}
+
+for( let i = 0; i < 5; i++) {
+    game();
+};
