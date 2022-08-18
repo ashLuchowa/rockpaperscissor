@@ -1,9 +1,19 @@
 # rockpaperscissor Plan
 A rock paper scissor game from TOP
 
-// Create a function that returns:
-computerChoice = returns Rock, paper or Scissor;
+# Write a function computerChoice()
+that chooses between rock, paper and scissor
 
+# Write a function that will play 1 round:
+function playRound(playerSelection, computerSelection) {
+    
+    >> insert game logic here <<
+}
+
+const playerSelection = '';
+Const computerSelection = computerChoice;
+
+# Game Logic
 // if playerSelection === rock
 
     computerSelection = rock;
@@ -30,3 +40,5 @@ computerChoice = returns Rock, paper or Scissor;
     "Win: Scissor cuts paper"
     computerSelection = scissor;
     "It's a tie"
+
+# call playROund(playerSelection, computerSelection)
