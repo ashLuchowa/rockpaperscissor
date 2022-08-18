@@ -13,51 +13,33 @@ function game() {
     // playing 1 round
     const playRound = (playerSelection, computerSelection) => {
 
-        // player's choice = rock
-        if (playerSelection === 'rock') {
-            if (computerSelection === 'scissor') {
-                playerScore++;
-                return 'You win!'
-            } else if (computerSelection === 'paper') {
-                computerScore++;
-                return 'You lose!'
-            } else {
-                return 'It\'s a tie!'
-            }
+        // It's a tie
+        if (playerSelection === computerSelection) {
+            return 'It\'s a tie'
         }
 
-        // player's choice = paper
-        else if (playerSelection === 'paper') {
-            if (computerSelection === 'rock') {
-                playerScore++;
-                return 'You win!'
-            } else if (computerSelection === 'scissor') {
-                computerScore++;
-                return 'You lose!'
-            } else {
-                return 'It\'s a tie!'
-            }
+        // Player win
+        if ((playerSelection === 'rock' && computerSelection === 'scissor') ||
+            (playerSelection === 'paper' && computerSelection === 'rock') ||
+            (playerSelection === 'scissor' && computerSelection === 'paper')) {
+            playerScore++;
+            return 'You win this round!'
         }
 
-        // player's choice = scissor
-        else {
-            if (computerSelection === 'rock') {
-                computerScore++;
-                return 'You lose!'
-            } else if (computerSelection === 'paper') {
-                playerScore++;
-                return 'You win!'
-            } else {
-                return 'It\'s a tie!'
-            }
+        // Computer Win
+        if ((playerSelection === 'rock' && computerSelection === 'paper') ||
+            (playerSelection === 'paper' && computerSelection === 'scissor') ||
+            (playerSelection === 'scissor' && computerSelection === 'rock')) {
+            computerScore++;
+            return 'You lost this round!'
         }
     }
 
     const playerSelection = prompt('Choose between rock, paper and scissor', 'rock')
     const computerSelection = getComputerChoice();
 
-    console.log(`Player: ${playerScore} | Computer: ${computerScore}`)
-    console.log(`Computer chose ${computerSelection}`)
+    console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
+    console.log(`You chose ${playerSelection} || Computer chose ${computerSelection}`)
     console.log(playRound(playerSelection, computerSelection))
 
 }
