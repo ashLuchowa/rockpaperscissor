@@ -7,15 +7,7 @@ It will choose between rock, paper and scissor
 ## Step 2: Write a function that will play 1 round
 function playRound(playerSelection, computerSelection) {
 
-    >> insert game logic here <<
-
-}
-
-## Step 3: Create the variables after playRound()
-const playerSelection = '';
-Const computerSelection = computerChoice;
-
-###### The game logics
+### Insert game logics here
 // if playerSelection === rock
 
     computerSelection = rock;
@@ -42,5 +34,13 @@ Const computerSelection = computerChoice;
     "Win: Scissor cuts paper"
     computerSelection = scissor;
     "It's a tie"
+}
 
-## Step 4: Call playRound(playerSelection, computerSelection)
+## Step 3: Create the variables after playRound()
+const playerSelection = prompt an answer from player;
+Const computerSelection = computerChoice;
+Then call playRound()
+
+## Step 4: Write game()
+It will call playRound() to play 5 times that
+keeps score and reports a winner and loser at the end
