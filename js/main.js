@@ -1,6 +1,11 @@
 let playerScore = 0;
 let computerScore = 0;
 
+//Button variables
+const chooseRock = document.getElementById('chooseRock');
+const choosePaper = document.getElementById('choosePaper');
+const chooseScissor = document.getElementById('chooseScissor');
+
 function game() {
 
     // computer chooses between rock, paper or scissor
@@ -35,12 +40,10 @@ function game() {
         }
     }
 
-    const playerSelection = prompt('Choose between rock, paper and scissor', 'rock').toLowerCase();
+    const playerSelection = document.getElementById('button');
     const computerSelection = getComputerChoice();
 
-    console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
-    console.log(`You chose ${playerSelection} || Computer chose ${computerSelection}`)
-    console.log(playRound(playerSelection, computerSelection))
+    console.log(playerSelection);
 
 }
 
@@ -48,13 +51,13 @@ for (let i = 0; i < 5; i++) {
     game();
 }
 
-if (playerScore > computerScore) {
-    console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
-    console.log('You won the game!')
-} else if (playerScore < computerScore) {
-    console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
-    console.log('You lost the game!')
-} else {
-    console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
-    console.log('It\'s a tie!')
-}
+// if (playerScore > computerScore) {
+//     console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
+//     console.log('You won the game!')
+// } else if (playerScore < computerScore) {
+//     console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
+//     console.log('You lost the game!')
+// } else {
+//     console.log(`Player: ${playerScore} || Computer: ${computerScore}`)
+//     console.log('It\'s a tie!')
+// }
